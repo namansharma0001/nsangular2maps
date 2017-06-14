@@ -1,0 +1,10 @@
+<agm-map [latitude]="12.91233" [longitude]="77.5882" [disableDefaultUI]="false" [zoom]="zoom">
+  <div *ngIf="status !='Completed'">
+  <agm-marker   [latitude]="startingPointLtd" [longitude]="startingPointLng"></agm-marker>
+  <agm-marker [iconUrl]="endIcon" [latitude]="currentPointLtd" [longitude]="currentPointLng"></agm-marker>
+  </div>
+  <div *ngIf="status=='Completed'">
+  <agm-map-directions  [startingPointLtd]="startingPointLtd" [startingPointLng]="startingPointLng" [currentPointLtd]="currentPointLtd" [currentPointLng]="currentPointLng" #test>
+  </agm-map-directions>
+  </div>
+</agm-map>

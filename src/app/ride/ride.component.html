@@ -1,0 +1,20 @@
+<div class="trackRider">
+<div id="logotrackContainer">
+    <img id="logotrack" src="/img/logo-login.svg">
+</div>
+<div id="trackContainer">
+    <div id="trackDialog">
+        <div id="trackText">
+            Log in to your account
+        </div>
+        <div id="trackBorder"></div>
+        <div class="trackBox">
+        <p *ngIf="rideStatus != 'Started'"><button  (click)="updateLocation()" id="startRide">Start ride</button></p>
+        <p  *ngIf="rideStatus=='Started'"><button (click)="stopRide()" id="startRide">Stop ride</button></p>
+
+        </div>
+        <button (click)="redirectToTrack()">Track Ride</button>
+
+    </div>
+</div>
+</div>
